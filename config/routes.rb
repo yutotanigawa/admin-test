@@ -15,5 +15,8 @@ Rails.application.routes.draw do
   resources :users,only: [:show,:index,:edit,:update]
   resources :books
 
+  namespace :admin do
+  	resources :books, only:[:index,:show,:edit]
+  end
 
 end

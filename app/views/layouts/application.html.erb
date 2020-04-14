@@ -40,8 +40,10 @@
     <div class="container">
       <p id="notice"><%= notice %></p> <!--デバイスでnotice設定されているので呼び出してるだけ-->
 
-      <%= yield %>
+      <%= yield %><br>
 
+      <%= link_to '管理者用ログインページ', new_admin_session_path, class: "btn btn-primary col-xs-3" %>
+      <%= link_to '管理者ログアウト', destroy_admin_session_path, method: :delete %>
     </div>
   </body>
 </html>
