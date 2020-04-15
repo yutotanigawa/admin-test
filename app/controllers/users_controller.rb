@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 
-  before_action :authenticate_user!
+   before_action :authenticate_user!
 	before_action :correct_user, only: [:edit, :update]
   before_action :configure_permitted_parameters, if: :devise_controller?
   #デバイス機能実行前にconfigure_permitted_parametersの実行をする。

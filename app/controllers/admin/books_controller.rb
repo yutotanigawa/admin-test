@@ -1,5 +1,5 @@
 class Admin::BooksController < ApplicationController
-
+   before_action :authenticate_admin!
 
   def index
   end
@@ -9,7 +9,6 @@ class Admin::BooksController < ApplicationController
 
   def edit
   end
-
 
 
 end
